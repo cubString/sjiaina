@@ -1,0 +1,16 @@
+
+build.sql
+Dockerfile
+fpm/env.conf
+fpm/php-fpm.conf
+fpm/php.ini
+misc/cronfile.final
+misc/cronfile.system
+monit/cron
+monit/nginx
+monit/php-fpm
+php/www.conf
+phpMyAdmin/config.inc.php
+sh/autoclean.sh
+sh/docker-entrypoint.sh
+ssmtp/ssmtp.conf.template
