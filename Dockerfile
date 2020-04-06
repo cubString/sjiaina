@@ -59,12 +59,12 @@ cd /opt/composer && ( \
     ln -s /opt/composer/composer.phar /usr/local/bin/composer; \
 )
 
-COPY ./conf/ssmtp.conf.template /etc/ssmtp/
+COPY ./ssmtp/ssmtp.conf.template /etc/ssmtp/
 COPY ./monit/monitrc /etc/monit/
 COPY ./monit/cron ./monit/php-fpm ./monit/nginx /etc/monit/conf-enabled/
 COPY ./php/www.conf /etc/php/$PHP_VERSION/fpm/pool.d/
-COPY ./php/php-fpm.conf ./php/php.ini ./conf/env.conf /etc/php/$PHP_VERSION/fpm/
+COPY ./fpm/php-fpm.conf ./fpm/php.ini ./fpm/env.conf /etc/php/$PHP_VERSION/fpm/
 COPY ./nginx/default /etc/nginx/sites-enabled/default
-COPY ./phpmyadmin/config.inc.php /var/www/html/pma/config.inc.php
+COPY ./phpMyAdmin/config.inc.php /var/www/html/pma/config.inc.php
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
