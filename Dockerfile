@@ -1,5 +1,7 @@
 FROM ubuntu:18.04
 
+MAINTAINER sjiaina@sina.com
+
 ARG PHP_VERSION=7.3
 ARG PHPMYADMIN=4.8.5
 
