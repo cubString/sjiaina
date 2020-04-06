@@ -6,6 +6,8 @@ server {
     root /app;
     index index.php index.html index.htm;
 
+    error_log /var/log/nginx/error.log error;
+    
     location /pma/ {
         root /var/www/html;
         index index.php;
